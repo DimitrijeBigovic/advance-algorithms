@@ -1,6 +1,4 @@
-import javax.tools.StandardLocation;
-
-public class Example {
+public class MergeSortExample {
 
 
     //Spajamo 2 podniza od niza arr[]
@@ -32,7 +30,7 @@ public class Example {
         int i = 0;
         int j = 0;
 
-        //Pocetni index spojenog niza podnizova
+        //Početni index spojenog niza podnizova
 
         int k = l;
         while (i < n1 && j < n2) {
@@ -64,9 +62,9 @@ public class Example {
 
 
     }
+
     //Glavna funkcija koja sortira arr[l..r] koristi
     //merge()
-
     static void mergeSort(int arr[], int l, int r) {
         if (l < r) {
             //Nadjimo srednju tacku
@@ -84,10 +82,16 @@ public class Example {
 
     public static void main(String[] args) {
 
-        int arr[] = {38, 27, 43, 10};
+        int arr[] = {52,47,61,45,56};
         int n = arr.length;
+        System.out.println("Niz prije sortiranja:");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+
+        }
         // sortiramo niz
         mergeSort(arr, 0, n - 1);
+        System.out.println("\nNiz nakon Merge Sorta:");
 
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
